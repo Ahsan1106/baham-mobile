@@ -81,7 +81,10 @@ const itemSeparatorComponent = () => <View style={{ borderColor: 'black', border
     // Demo: Section List
     <View style={styles.container}>
       {/* Attach header component */}
-      <AppHeader />
+<AppHeader>
+
+</AppHeader>
+    
       <Login />
       <View style={styles.mainContainer}>
         <SectionList 
@@ -92,8 +95,15 @@ const itemSeparatorComponent = () => <View style={{ borderColor: 'black', border
         keyExtractor={(item, index) => item.id * (item.id + index)}
         />
       </View>
-      {/* Attach footer component */}
-      <AppFooter />
+  <div>
+    <label>ENTER FEEDBACK</label>
+    <input
+    type='textarea'
+    name=' textvalue'
+    ></input>
+    </div> 
+   <button>submit</button>
+    <AppFooter></AppFooter>
     </View>
   );
 }
